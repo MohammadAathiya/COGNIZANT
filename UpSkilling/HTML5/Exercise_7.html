@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<script>
+
+function ready(){
+    document.getElementById("msg").innerHTML=
+    "Video ready to play";
+}
+
+window.onbeforeunload=function(){
+    return "Are you sure you want to leave?";
+};
+
+</script>
+
+</head>
+<body>
+
+<h2>Community Event Video</h2>
+
+<video width="400"
+controls
+oncanplay="ready()">
+
+<source src="event.mp4"
+type="video/mp4">
+
+</video>
+
+<p id="msg"></p>
+
+</body>
+</html>
